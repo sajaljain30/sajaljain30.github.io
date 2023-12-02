@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Application</title>
+    <!-- Include TypeIt library -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('https://media.giphy.com/media/pVGsAWjzvXcZW4ZBTE/giphy.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+
+        .wrapper {
+            text-align: center;
+            width: -webkit-fill-available;
+            margin-bottom: 40px; /* Adjust the margin as needed */
+        }
+
+        .static-txt {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .dynamic-txts {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="static-txt">i'm <span id="dynamic-text" class="dynamic-txts"></span></div>
+</div>
+
+<!-- Social Icons Row -->
+<div class="social-icons">
+    <a href="https://instagram.com/sajaljain30" target="_blank"><i class="fab fa-instagram fa-2xl"></i></a>
+    <a href="https://github.com/sajaljain30" target="_blank"><i class="fab fa-github fa-flip fa-2xl"></i></a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-youtube fa-2xl"></i></a>
+</div>
+
+<script>
+    // Initialize TypeIt
+    new TypeIt('#dynamic-text', {
+        strings: ["a pilot", "an engineer", "a skydiver", "sajal"],
+        speed: 100,
+        breakLines: false,
+        waitUntilVisible: true,
+        loop: true,
+    }).go();
+</script>
+
+</body>
+</html>
